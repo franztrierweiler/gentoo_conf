@@ -1,0 +1,17 @@
+# Partitionner /dev/sda
+# On utilise fdisk au lieu de parted
+fdisk /dev/sda
+# Liste les partitions du disque
+p
+# Créer la partition du BIOS, début cylindre 2048, taille 2M
+n
+p
+1
+2048
++2M
+# Change le type de partition à 4 (BIOS)
+t
+1
+4
+
+
